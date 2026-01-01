@@ -22,6 +22,18 @@ project "EasyUI"
         "%{prj.name}/src/**.cpp"
     }
 
+    includedirs {
+        "%{prj.name}/src"
+    }
+
+    filter "configurations:Debug"
+        defines { "EASYUI_DEBUG" }
+        symbols "On"
+
+    filter "configurations:Release"
+        defines { "EASYUI_RELEASE" }
+        optimize "On"
+
     postbuildcommands {
         -- in case cp interprets /Sandbox as the target file and not the target directory
         ("{MKDIR} ../bin/" .. outputdir .. "/Sandbox"),
@@ -49,3 +61,11 @@ project "Sandbox"
     links {
         "EasyUI"
     }
+
+    filter "configurations:Debug"
+        defines { "EASYUI_DEBUG" }
+        symbols "On"
+
+    filter "configurations:Release"
+        defines { "EASYUI_RELEASE" }
+        optimize "On"
