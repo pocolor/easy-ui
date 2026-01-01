@@ -1,7 +1,11 @@
 # Dirs
 .idea
-bin/
-bin-int/
+bin
+bin-int
+compile_commands
+
+^vendor/bin
 
 # Files
 **/Makefile
+compile_commands.json

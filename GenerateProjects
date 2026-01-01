@@ -2,3 +2,6 @@
 
 alias premake5="./vendor/bin/premake/premake5"
 premake5 gmake
+premake5 export-compile-commands
+
+cp ./compile_commands/debug.json ./compile_commands.json

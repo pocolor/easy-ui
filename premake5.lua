@@ -1,3 +1,5 @@
+require "vendor/premake/export-compile-commands"
+
 workspace "easy-ui"
     architecture "x64"
 
