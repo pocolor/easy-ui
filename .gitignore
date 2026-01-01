@@ -1,3 +1,7 @@
 # Dirs
+.idea
 bin/
 bin-int/
+
+# Files
+**/Makefile
